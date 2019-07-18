@@ -1,0 +1,46 @@
+<h2>Angular 2 Operation</h2>
+<table>
+    <tr>
+        <td> ID</td>
+        <td><input type="text" [(ngModel)]="empId"  /></td>
+    </tr>
+    <tr>
+        <td>
+             Name
+        </td>
+        <td><input type="text" [(ngModel)]="empName" /></td>
+    </tr>
+    <tr>
+        <td>
+             Salary
+        </td>
+        <td><input type="text" [(ngModel)]="empSalary" /></td>
+    </tr>
+    <tr>
+        <td>
+         Department
+        </td>
+        <td><input type="text" [(ngModel)]="empDep" /></td>
+    </tr>
+</table>
+<input type ="button" value="Add Employee" (click)="addEmployee()"/>
+
+
+<table >
+    
+    <tr *ngFor="let data of empAll;let i=index">
+        <td>
+                {{data.empId}}  
+        </td>
+        <td>
+                {{data.empName}}  
+        </td>
+        <td>
+                 {{data.empSalary}}  
+        </td>
+        <td>
+                {{data.empDep}}  
+        </td>
+        
+    </tr>
+</table>
